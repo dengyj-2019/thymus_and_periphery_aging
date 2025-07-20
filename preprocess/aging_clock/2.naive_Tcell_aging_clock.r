@@ -729,6 +729,7 @@ pcc <- sort(pcc, decreasing = T)
 
 write.table(data.frame(names(pcc), pcc), file = 'centenarian_pcc.rnk', quote = F,sep = '\t',
             col.names = F, row.names = F)
+
 #Linux environment
 gsea-cli.sh GSEAPreranked -rnk centenarian_pcc.rnk \
 -gmx /data1/02.private/dengyj/analysis/thymus/Integrated/thymus_PB/Enrichment/GO_KEGG_REACTOME.gmt \
