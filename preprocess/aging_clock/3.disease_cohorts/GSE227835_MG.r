@@ -113,7 +113,7 @@ ggplot(ind_plot_df[!ind_plot_df$class %in%c('pred'),], aes(class, Age,fill=class
 
 geom_boxplot()+
 geom_point(mapping = aes())+geom_line(mapping = aes(group = batch)) +
-ggpubr::stat_compare_means(method = 't.test',label.x.npc = 0.25, size = 13.75/.pt)+
+ggpubr::stat_compare_means(method = 't.test', paired = T, label.x.npc = 0.25, size = 13.75/.pt)+
 d_theme_w(size=13.75, italic_text = '')+
 scale_x_discrete(label = function(x){
     x <-gsub('true', 'Real', x)
