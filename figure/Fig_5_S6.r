@@ -768,7 +768,7 @@ tmp_df$class <- factor(tmp_df$class, levels=c('true','pred', 'pred_adj'))
 ggplot(tmp_df[!tmp_df$class %in% c('pred'),], aes(class, Age,fill=class))+
 geom_boxplot()+
 geom_point(mapping = aes())+geom_line(mapping = aes(group = batch)) +
-ggpubr::stat_compare_means(method = 't.test',label.x.npc = 0.05, size = 13.75/.pt)+
+ggpubr::stat_compare_means(method = 't.test',paired = T,label.x.npc = 0.05, size = 13.75/.pt)+
 d_theme_w(size=13.75, italic_text = '')+
 scale_x_discrete(label = function(x){
     x <-gsub('true', 'Actual', x)
@@ -793,7 +793,7 @@ tmp_df$class <- factor(tmp_df$class, levels=c('true','pred', 'pred_adj'))
 ggplot(tmp_df[!tmp_df$class %in% c('pred'),], aes(class, Age,fill=class))+
 geom_boxplot()+
 geom_point(mapping = aes())+geom_line(mapping = aes(group = batch)) +
-ggpubr::stat_compare_means(method = 't.test',label.x.npc = 0, size = 13.75/.pt, hjust = 0.25)+
+ggpubr::stat_compare_means(method = 't.test',paired = T,label.x.npc = 0, size = 13.75/.pt, hjust = 0.25)+
 d_theme_w(size=13.75, italic_text = '')+
 scale_x_discrete(label = function(x){
     x <-gsub('true', 'Actual', x)
@@ -981,7 +981,7 @@ ggplot(HIV_ind_plot_df[!HIV_ind_plot_df$class %in%c('pred') ,], aes(class, Age,f
 
 geom_boxplot()+
 geom_point(mapping = aes())+geom_line(mapping = aes(group = batch)) +
-ggpubr::stat_compare_means(method = 't.test',label.x.npc = 0, size = 13.75/.pt)+
+ggpubr::stat_compare_means(method = 't.test',paired = T,label.x.npc = 0, size = 13.75/.pt)+
 d_theme_w(size=13.75, italic_text = '')+
 scale_x_discrete(label = function(x){
     x <-gsub('true', 'Actual', x)
@@ -1002,7 +1002,7 @@ ggplot(HBV_ind_plot_df[!HBV_ind_plot_df$class %in%c('pred'),], aes(class, Age,fi
 
 geom_boxplot()+
 geom_point(mapping = aes())+geom_line(mapping = aes(group = batch)) +
-ggpubr::stat_compare_means(method = 't.test',label.x.npc = 0.1, size = 13.75/.pt)+
+ggpubr::stat_compare_means(method = 't.test',paired = T,label.x.npc = 0.1, size = 13.75/.pt)+
 d_theme_w(size=13.75, italic_text = '')+
 scale_x_discrete(label = function(x){
     x <-gsub('true', 'Actual', x)
@@ -1143,7 +1143,7 @@ options(repr.plot.width=2.5, repr.plot.height=4)
 ggplot(SLE_ind_plot_df[!SLE_ind_plot_df$class %in%c('pred') ,], aes(class, Age,fill=class))+
 geom_boxplot()+
 geom_point(mapping = aes())+geom_line(mapping = aes(group = batch)) +
-ggpubr::stat_compare_means(method = 't.test',label.x.npc = 0, size = 13.75/.pt)+
+ggpubr::stat_compare_means(method = 't.test',paired = T,label.x.npc = 0, size = 13.75/.pt)+
 d_theme_w(size=13.75, italic_text = '')+
 scale_x_discrete(label = function(x){
     x <-gsub('true', 'Actual', x)
@@ -1164,7 +1164,7 @@ ggplot(MG_ind_plot_df[!MG_ind_plot_df$class %in%c('pred') ,], aes(class, Age,fil
 
 geom_boxplot()+
 geom_point(mapping = aes())+geom_line(mapping = aes(group = batch)) +
-ggpubr::stat_compare_means(method = 't.test',label.x.npc = 0.15, size = 13.75/.pt)+
+ggpubr::stat_compare_means(method = 't.test',paired = T,label.x.npc = 0.15, size = 13.75/.pt)+
 d_theme_w(size=13.75, italic_text = '')+
 scale_x_discrete(label = function(x){
     x <-gsub('true', 'Actual', x)
